@@ -20,8 +20,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                    docker rm -f demo || true
-                    docker run -d --name demo -p 8081:3000 $IMAGE:$TAG
+                    docker rm -f node_webapp || true
+                    docker run -d --name node_webapp -p 8081:3000 $IMAGE:$TAG
                 '''
             }
         }
