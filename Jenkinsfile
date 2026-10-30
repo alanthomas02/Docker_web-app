@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE = "node_app:1.1"
+        IMAGE = "node_app"
         TAG   = "${env.BUILD_NUMBER}"
     }
 
