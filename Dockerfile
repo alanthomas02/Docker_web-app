@@ -8,7 +8,7 @@ RUN npm install --omit=dev
 FROM node:20-alpine 
 WORKDIR /app
 ENV NODE_ENV=production
-COPY --from=Build /app/node_modules ./app/node_modules
+COPY --from=Build /app/node_modules ./node_modules
 COPY . .
 USER node
 EXPOSE 3000
